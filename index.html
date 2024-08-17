@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Planner with Pomodoro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Planner</h1>
+            <button id="add-task-btn" class="btn">+ Add Task</button>
+        </header>
+
+        <!-- Task Section -->
+        <section id="tasks">
+            <h2>My Tasks</h2>
+            <ul id="task-list">
+                <!-- Dynamic task list will go here -->
+            </ul>
+        </section>
+
+        <!-- Pomodoro Timer -->
+        <section id="pomodoro">
+            <h2>Pomodoro Timer</h2>
+            <div class="timer">
+                <span id="timer-minutes">25</span>:<span id="timer-seconds">00</span>
+            </div>
+            <button id="start-timer" class="btn">Start Timer</button>
+        </section>
+
+        <!-- Add Task Modal -->
+        <div id="task-modal" class="modal">
+            <div class="modal-content">
+                <h3>Add New Task</h3>
+                <input type="text" id="task-name" placeholder="Task Name">
+                <input type="number" id="task-duration" placeholder="Estimated Time (mins)">
+                <select id="task-priority">
+                    <option value="low">Low Priority</option>
+                    <option value="medium">Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+                <button id="save-task" class="btn">Save Task</button>
+                <button id="close-modal" class="btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
